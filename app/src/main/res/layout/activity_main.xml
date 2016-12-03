@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.punithrkashi.eggtimer.MainActivity">
 
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/timerSeekBar"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/egg"
+        android:id="@+id/egg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
+        android:text="00:30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/time"
+        android:textSize="36sp"
+        android:layout_marginTop="173dp"
+        android:layout_below="@+id/timerSeekBar"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/time"
+        android:layout_alignEnd="@+id/time"
+        android:layout_marginTop="98dp"
+        android:id="@+id/start"
+        android:onClick="controlTimer"/>
 </RelativeLayout>
